@@ -1,0 +1,160 @@
+h1 {
+    border: solid black 1px;
+    padding: 20px
+}
+
+h1::before {
+    content: "Header";
+    position: relative;
+    bottom: 45px;
+    background: white;
+    font-size: medium;
+}
+
+header {
+    width: 1830px;
+}
+
+header>ul {
+    float: right;
+    position: absolute;
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 5px;
+    top: 25px !important;
+    outline: solid black 1px;
+    outline-offset: 5px;
+    right: 20px;
+    outline: solid black 1px;
+    outline-offset: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    float: none;
+    position: unset;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+header>ul:first-of-type::before {
+    content: "Nav";
+    position: relative;
+    bottom: 19px;
+    background: white;
+}
+
+main>p {
+    border: solid black 1px;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+article:first-child {
+    width: 1820px;
+}
+
+article {
+    border: solid black 1px;
+    width: 1480px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+article::before {
+    content: "Article";
+    position: relative;
+    bottom: 15px;
+    background: white;
+}
+
+footer {
+    border: solid black 1px;
+    position: relative;
+    bottom: 0;
+    width: 1808px;
+    margin-top: 30px;
+}
+
+footer::before {
+    content: "Footer";
+    position: relative;
+    bottom: 12px;
+    background: white;
+    left: 10px;
+}
+
+section:before {
+    content: "Section";
+    position: relative;
+    bottom: 20px;
+    background: white;
+    left: 10px;
+}
+
+section {
+    border: solid black 1px;
+    padding: 10px;
+}
+
+address {
+    text-align: center;
+    top: -10px;
+    position: relative;
+    padding-left: 150px;
+}
+
+input {
+    float: right;
+    position: relative;
+    width: 1200px;
+}
+
+textarea {
+    width: 1200px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+input[type="submit"] {
+    width: 400px;
+    position: relative;
+    top: -60px;
+    left: -170px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+div.form {
+    margin: 20px;
+}
+
+aside {
+    border: solid black 1px;
+    position: relative;
+    right: 35px;
+    float: right;
+    top: -635px;
+    height: 602px;
+    width: 270px;
+}
+
+aside::before {
+    content: "Aside";
+    position: relative;
+    bottom: 10px;
+    background: white;
+    left: 10px;
+}
+
+body>aside {
+    margin-top: 29px !important;
+}
+
+div {
+    padding: 10px;
+}

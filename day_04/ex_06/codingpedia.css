@@ -1,0 +1,274 @@
+h1 {
+    border: solid black 1px;
+    padding: 20px
+}
+
+h1::before {
+    content: "Header";
+    position: relative;
+    bottom: 45px;
+    background: white;
+    font-size: medium;
+}
+
+.container {
+    width: 90%;
+    position: relative;
+    left: 20px;
+    right: 20px;
+}
+
+#lin {
+    background: linear-gradient(#ADD8E6, #00008B);
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#first-letter::first-letter {
+    background-color: grey;
+    font-size: 24px;
+}
+
+#uncommon-font {
+    font-family: 'Satisfy';
+}
+
+header>ul {
+    float: right;
+    position: absolute;
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 5px;
+    top: 25px !important;
+    outline: solid black 1px;
+    outline-offset: 5px;
+    right: 20px;
+    outline: solid black 1px;
+    outline-offset: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    float: none;
+    position: unset;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+header>ul:first-of-type::before {
+    content: "Nav";
+    position: relative;
+    bottom: 19px;
+    background: white;
+}
+
+main>p {
+    border: solid black 1px;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+article {
+    border: solid black 1px;
+    width: 1480px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+article::before {
+    content: "Article";
+    position: relative;
+    bottom: 15px;
+    background: white;
+}
+
+footer {
+    border: solid black 1px;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+footer::before {
+    content: "Footer";
+    position: relative;
+    bottom: 12px;
+    background: white;
+    left: 10px;
+}
+
+section:before {
+    content: "Section";
+    position: relative;
+    bottom: 20px;
+    background: white;
+    left: 10px;
+}
+
+section {
+    border: solid black 1px;
+    padding: 10px;
+}
+
+address {
+    text-align: center;
+    top: -10px;
+    position: relative;
+    padding-left: 150px;
+}
+
+input {
+    float: right;
+    position: relative;
+    width: 710px;
+}
+
+textarea {
+    width: 1455px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+input[type="submit"] {
+    width: 400px;
+    position: relative;
+    top: -60px;
+    left: 0px;
+    height: 25px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+div.form {
+    margin: 20px;
+}
+
+aside {
+    border: solid black 1px;
+    position: relative;
+    right: 35px;
+    float: right;
+    top: -1114px;
+    height: 742px;
+    width: 270px;
+}
+
+aside::before {
+    content: "Aside";
+    position: relative;
+    bottom: 10px;
+    background: white;
+    left: 10px;
+}
+
+div {
+    padding: 10px;
+}
+
+.block {
+    height: 50px;
+    width: 50px;
+    background: green;
+    display: inline-block;
+}
+
+.block[foobar="foo1"] {
+    background: red;
+}
+
+.block[foobar="foo2"] {
+    background: blue;
+}
+
+@media screen and (max-width: 1280px) {
+    article {
+        width: 900px;
+    }
+
+    input {
+        width: 725px;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    textarea {
+        width: 850px;
+    }
+
+    input[type="submit"] {
+        left: -38px;
+    }
+    body > aside {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    aside {
+        top: -937px;
+        right: 9px;
+        width: 105px;
+        height: 894px;
+    }
+    article:last-of-type {
+        width: 245px;
+    }
+    article:first-child {
+        width: 245px;
+    }
+    input[type="submit"] {
+        left: -40px;
+        width: 100px;
+    }
+
+    input {
+        width: 100px;
+    }
+
+    textarea {
+        width: 200px;
+    }
+
+    article {
+        width: 255px;
+    }
+
+    input[type="submit"] {
+        left: -10px;
+        width: 100px;
+    }
+
+    footer {
+        width: 360px;
+        bottom: 10px;
+        position: relative;
+    }
+
+    div.form>label {
+        font-size: small;
+    }
+    header>ul {
+        outline: solid black 1px;
+        outline-offset: 5px;
+        border-radius: 5px;
+        width: 170px;
+        top: -13px !important;
+        right: 6px;
+        float: right;
+        position: relative;
+        border: solid black 1px;
+        padding: 10px;
+    }
+    header {
+        width: 384px;
+        padding-bottom: 49px;
+    }
+    h1 {
+        font-size: medium;
+    }
+}

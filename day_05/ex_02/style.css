@@ -1,0 +1,40 @@
+.app {
+    display: flex;
+    min-height: 100vh;
+    flex-flow: column;
+}
+
+@media only screen and (max-device-width:767px) {
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: blue;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        flex: 1;
+        flex-direction: column;
+    }
+    section.firstSection {
+        background: green;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        flex: 2;
+    }
+    article.ArticleView {
+        background: yellow;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        height: 10em;
+        flex: 2;
+    }
+    footer {
+        position: relative;
+        background: red;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        flex: 1;
+    }
+}
