@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex04</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <form id="myForm" action="submit" method="post">
+        <input type="email" name="email" id="">
+        <button id="submit" type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+    <button id="loadbootstrap" class="btn btn-primary">
+        Charger bootstrap
+    </button>
+    <script>
+        $("#loadbootstrap").click(function (event) {
+            $.getScript("bootstrap/js/bootstrap.min.js", function (
+                response,
+                status
+            ) {
+                alert("Bootstrap OK");
+            });
+        });
+
+        $("#submit").click(function (event) {
+            event.preventDefault();
+            let data = $("#myForm").serialize();
+            $.ajax({
+                type: "POST",
+                url: "ex03.php",
+                data: data,
+                success: function (response) {
+                    alert(response);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

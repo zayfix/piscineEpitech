@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex05</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <button class="btn btn-primary" id="loadBtn">Load Countries</button>
+    <table>
+        <thead>
+            <th>Country-Code</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        $("#loadBtn").click(function () {
+            $.getJSON("countries.json", function (data) {
+                $.each(data, function (index, d) {
+                    $("tbody").append(
+                        "<tr><td>" + index + "</td><td>" + d + "</td></tr>"
+                    );
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
